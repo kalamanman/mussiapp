@@ -1,5 +1,5 @@
-import {createContext,useReducer} from 'react'
-
+import {createContext,useEffect,useReducer} from 'react'
+import { appAuth, appFirestore } from '../Firebase/config'
 export const authContext = createContext()
 export const authReducer =(state,action)=>{
     switch(action.type){
@@ -20,6 +20,13 @@ export const AuthProvider=({children})=>{
                         authIsReady:null
                      })
     console.log('The state:',state)
+    // user  auth status 
+    useEffect(()=>{
+    const unsub =appAuth.onAuthStateChanged(user=>{
+        dispatch({type:'AUTH_READY',payload:user})
+        unsub()
+    })
+    },[])
     return(
         <authContext.Provider value={{...state,dispatch}}>
             {children}

@@ -17,6 +17,7 @@ const signUp=async(email,password,displayName)=>{
     }
     console.log('signup function',res.user)
     setStatus('success')
+    await res.user.updateProfile({displayName})
     dispatch({type:'LOGIN',payload:res.user})
     }catch(err){
         setError(err.message)

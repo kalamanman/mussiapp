@@ -11,7 +11,7 @@ const signIn=async(email,password)=>{
     setStatus('loading')
     try{
     const res =  await 
-    appAuth.signInUserwithEmailAndPassword(email,password)
+    appAuth.signInWithEmailAndPassword(email,password)
     if(!res.user){
         throw new Error('Could not sign you in !!')
     }
