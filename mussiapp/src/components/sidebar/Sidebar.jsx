@@ -1,3 +1,4 @@
+import{NavLink} from 'react-router-dom'
 import './Sidebar.css'
 import DashboardIcon from '../../assets/dashboard_icon.svg'
 import AddIcon from '../../assets/add_icon.svg'
@@ -20,7 +21,7 @@ const Sidebar = () => {
                     </li>
                     <li>
                         <NavLink to ='/create'>
-                            <img src={AdddIcon} alt="add icon"  />
+                            <img src={AddIcon} alt="add icon"  />
                             <span>Add New Project</span>
                         </NavLink>
                     </li>

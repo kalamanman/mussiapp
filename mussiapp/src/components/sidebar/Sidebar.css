@@ -20,16 +20,16 @@
   margin-top: 80px;
   margin-left: 20px;
 }
-.sidebar links li {
+.sidebar .links li {
     margin-top: 10px;
 }
-.sidebar links a {
+.sidebar .links a {
     display: flex;
     padding: 10px;
     width: 100%;
     color: #fff;
 }
-.sidebar links img {
+.sidebar .links img {
     margin-right: 10px;
     filter: invert(100%);
 }
