@@ -9,6 +9,7 @@ import Signup from './pages/signup/signup'
 import Login from './pages/login/Login'
 import Create from './pages/create/Create'
 import Project from './pages/project/Project'
+import Navbar from './components/navbar/Navbar'
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <div className="container">
+        <Navbar/>
         <Routes>
           <Route path='/' element={<Dashboard/>}/>
           <Route path='/signup' element={<Signup/>}/>
