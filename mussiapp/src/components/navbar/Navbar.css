@@ -17,12 +17,12 @@
     margin-right: auto;
     letter-spacing: 0.3em;
     font-weight: 500;
-    color: lightgray;
+    color: #777;
 }
 .nav .logo img{
     margin-top: -8px;
     margin-right: 1em;
-    filter: invert(25%);
+    filter: invert(50%);
     width: 2em;
 }
 .nav a {
