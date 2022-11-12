@@ -1,15 +1,16 @@
 
 
 import './App.css'
+import { useAuthContext } from './hooks/useAuthContext'
 
 function App() {
   
-
+    const {user} =useAuthContext()
   return (
     <div className="App">
       <div className="container">
-        Hello Mussi App
-    <button className="btn">hello</button>
+    
+    <button className="btn">Hello</button>
       </div>
     </div>
   )
