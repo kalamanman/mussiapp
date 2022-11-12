@@ -1,0 +1,24 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+
+ul {
+  display: flex;
+  list-style-type: none;
+  align-items: center;
+}
+.btn{
+  display: inline-block;
+  width: 200px;
+  padding: 4px 16px;
+  background: none;
+  border: 2px solid white;
+  color: #fff;
+  border-radius: 4px;
+  font-size: 2em;
+  font-weight: 500;
+}
+li span label{
+  display: block;
+}

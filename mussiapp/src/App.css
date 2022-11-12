@@ -1,0 +1,10 @@
+.App{
+  display: flex;
+}
+
+ .container{
+  flex-grow: 1;
+  background-color: aquamarine;
+  height: 100vh;
+  width: 960px;
+}
