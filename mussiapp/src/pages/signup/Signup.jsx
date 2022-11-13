@@ -12,16 +12,27 @@ const Signup = () => {
     //submit
     const handleSubmit=(e)=>{
         e.preventDefault()
-        console.log('thumb',thumbnail.name)
+        console.log('thumb',thumbnail,thumbnailError)
     }
     //handleClick
     
       //handleFileChange
-      const handleFile=async(e)=>{
+      const handleFile=(e)=>{
         
         let selected = e.target.files[0]
         
-    console.log('selected',selected)
+    if(!selected){
+        setThumbnailError('Please select a file')
+    }
+    
+    if(!selected.type.includes('image')){
+        setThumbnailError('Please choose an image file !')
+        return
+    }
+    if (selected.size>1000000){
+        setThumbnailError('File is has to be less than 1 Kbytes !')
+        return
+    }
         
     setThumbnail( selected)
     
