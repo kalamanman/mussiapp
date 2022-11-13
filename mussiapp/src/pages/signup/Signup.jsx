@@ -6,17 +6,26 @@ const Signup = () => {
     const[email,setEmail]=useState('')
     const[password,setPassword] =useState('')
     const[displayName,setDisplayName]=useState('')
-    const[thumbnail,setThumbnail] =useState([])
+    const[thumbnail,setThumbnail] =useState(null)
     const[thumbnailError,setThumbnailError]=useState('')
     
     //submit
     const handleSubmit=(e)=>{
         e.preventDefault()
-        console.log(thumbnail)
+        console.log('thumb',thumbnail.name)
     }
     //handleClick
     
       //handleFileChange
+      const handleFile=async(e)=>{
+        
+        let selected = e.target.files[0]
+        
+    console.log('selected',selected)
+        
+    setThumbnail( selected)
+    
+      }
     
   return (
     <form  className="signup-form">
@@ -49,7 +58,7 @@ const Signup = () => {
             <input 
                 type="file"
                 
-                onChange={(e)=>setThumbnail(e.target.files[0])}
+                onChange={handleFile}
                    
             />
         </label>
