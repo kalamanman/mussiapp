@@ -9,7 +9,7 @@ const Sidebar = () => {
         <div className="content">
             <div className="user">
                 {/*  avetar and user later */}
-                <p> hey user</p>
+                <p> Hey user</p>
             </div>
             <nav className="links">
                 <ul>
