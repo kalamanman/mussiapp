@@ -32,9 +32,11 @@ ul {
   font-weight: 500;
   cursor: pointer;
 }
-li span label{
+ span, label{
   display: block;
+  
 }
+
 a{
   text-decoration: none;
 }
@@ -42,4 +44,9 @@ a{
   color:#fff;
   background-color: var(--primary-color);
 
+}
+span,input{
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 8px;
 }
