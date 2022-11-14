@@ -3,19 +3,19 @@ import useAutContext from './useAuthContext'
 import {appAuth, appFirestore, appStorage} from '../Firebase/config'
 
 export const useSignup =()=>{
-   const[status,setStatus] =useState(null)
+   const[isPending,setIspending] =useState(false)
    const[error,setError] =useState(null)
    const {dispatch} =useAutContext()
 const signup=async(email,password,displayName,thumbnail)=>{
     setError(null)
-    setStatus('loading')
+    setIspending(true)
     try{
     const res =  await 
     appAuth.createUserWithEmailAndPassword(email,password)
     if(!res.user){
         throw new Error('Could not sign you up !!')
     }
-    console.log('signup function',res.user)
+    
     
      //uplaodpath
      const uplaodPath =`Thumbnail/${res.user.uid}/${thumbnail.name}`
@@ -31,17 +31,17 @@ const signup=async(email,password,displayName,thumbnail)=>{
         photoURL
       })
 
-      setStatus('success')
+      setIspending(false)
     //
     dispatch({type:'LOGIN',payload:res.user})
    
 
     }catch(err){
         setError(err.message)
-        setStatus('error')
+        setIspending(false)
     }
 }
 
-return {signup,status,error}
+return {signup,isPending,error}
 
 }

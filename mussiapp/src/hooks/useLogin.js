@@ -1,14 +1,14 @@
 import {useState} from 'react'
-import{useAutContext} from './useAuthContext'
+import useAutContext from './useAuthContext'
 import {appAuth} from '../Firebase/config'
 
 export const useLogin =()=>{
-   const[status,setStatus] =useState(null)
+   const[isPending,setIspending] =useState(false)
    const[error,setError] =useState(null)
    const {user,dispatch} =useAutContext()
 const login=async(email,password)=>{
     setError(null)
-    setStatus('loading')
+    setIspending(true)
     try{
     const res =  await 
     appAuth.signInWithEmailAndPassword(email,password)
@@ -16,14 +16,14 @@ const login=async(email,password)=>{
         throw new Error('Could not sign you in !!')
     }
     console.log('login function',res.user)
-    setStatus('success')
+    setIspending(false)
     dispatch({type:'LOGIN',payload:res.user})
     }catch(err){
         setError(err.message)
-        setStatus('error')
+        setIspending(false)
     }
 }
 
-return {login,status,error}
+return {login,isPending,error}
 
 }

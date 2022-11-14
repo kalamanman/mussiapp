@@ -41,7 +41,11 @@ const Signup = () => {
       }
     
   return (
+      
+      
+    
     <form  className="signup-form">
+    <h2>Sign Up</h2>
         <label>
             <span>email:</span>
             <input type="email"
@@ -75,10 +79,11 @@ const Signup = () => {
                    
             />
         </label>
-        
-        <button className="btn"onClick={handleSubmit}>Signup</button>
         {thumbnailError&&  <p className='error'>{thumbnailError}</p> }
+        <button className="btn"onClick={handleSubmit}>Signup</button>
+        
     </form>
+    
   )
 }
 

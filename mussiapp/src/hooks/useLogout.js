@@ -11,8 +11,8 @@ export const useLogout = () => {
         try{
             //update user online status
      const {uid} =user
-      ( await appFirestore.collection('users').doc(uid).update({online:false}) &&
-       await appAuth.signOut())
+       await appFirestore.collection('users').doc(uid).update({online:false}) 
+       await appAuth.signOut()
        dispatch({type:'LOGOUT'})// no need to dispatch payload :null
        setStatus('success')
         }catch(err){
