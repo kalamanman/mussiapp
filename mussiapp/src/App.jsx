@@ -1,7 +1,7 @@
 
 
 import { BrowserRouter,Routes,Route } from 'react-router-dom'
-import { useAuthContext } from './hooks/useAuthContext'
+import  useAuthContext from './hooks/useAuthContext'
 //styles
 import './App.css'
 import { Dashboard } from './pages/dashboard/Dashboard'

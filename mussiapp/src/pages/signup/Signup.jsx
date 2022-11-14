@@ -1,4 +1,5 @@
 import {useState} from 'react'
+import {useSignup} from '../../hooks/useSignup'
 //styles
 import './Signup.css'
 const Signup = () => {
@@ -8,11 +9,11 @@ const Signup = () => {
     const[displayName,setDisplayName]=useState('')
     const[thumbnail,setThumbnail] =useState(null)
     const[thumbnailError,setThumbnailError]=useState('')
-    
+    const {signup,status,error} = useSignup()
     //submit
     const handleSubmit=(e)=>{
         e.preventDefault()
-        console.log('thumb',thumbnail,thumbnailError)
+        signup(email,password,displayName,thumbnail)
     }
     //handleClick
     
