@@ -30,7 +30,7 @@ const Signup = () => {
         return
     }
     if (selected.size>1000000){
-        setThumbnailError('File is has to be less than 1 Kbytes !')
+        setThumbnailError('File  has to be less than 1 Kbytes !')
         return
     }
         
@@ -75,6 +75,7 @@ const Signup = () => {
         </label>
         
         <button className="btn"onClick={handleSubmit}>Signup</button>
+        {thumbnailError&&  <p className='error'>{thumbnailError}</p> }
     </form>
   )
 }
