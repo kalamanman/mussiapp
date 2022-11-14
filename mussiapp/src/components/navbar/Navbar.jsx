@@ -15,12 +15,10 @@ const Navbar = () => {
             </li>
             <li><Link to ='/login'>Login</Link></li>
             <li><Link to ='/signup'>Signup</Link></li>
-            <li><button 
-            className="btn"
-            onClick={logout}
-            >
-              Logout
-              </button></li>
+            <li>
+             {status !=='loading'&& <button className="btn"onClick={logout}>Logout</button>}
+             {status==='loading' && <button className="btn" onClick={logout} disabled>Login out ..</button>}
+              </li>
         </ul>
     </div>
   )

@@ -6,7 +6,7 @@ export const useLogin =()=>{
    const[status,setStatus] =useState(null)
    const[error,setError] =useState(null)
    const {user,dispatch} =useAutContext()
-const signIn=async(email,password)=>{
+const login=async(email,password)=>{
     setError(null)
     setStatus('loading')
     try{
@@ -20,10 +20,10 @@ const signIn=async(email,password)=>{
     dispatch({type:'LOGIN',payload:res.user})
     }catch(err){
         setError(err.message)
-        setStatus('Error')
+        setStatus('error')
     }
 }
 
-return {status,error}
+return {login,status,error}
 
 }
