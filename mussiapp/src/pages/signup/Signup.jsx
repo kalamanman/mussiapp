@@ -18,7 +18,8 @@ const Signup = () => {
     
       //handleFileChange
       const handleFile=(e)=>{
-        
+        setThumbnail(null)
+        setThumbnailError('')
         let selected = e.target.files[0]
         
     if(!selected){
