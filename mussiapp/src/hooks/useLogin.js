@@ -1,6 +1,6 @@
 import {useState} from 'react'
 import useAutContext from './useAuthContext'
-import {appAuth} from '../Firebase/config'
+import {appAuth,appFirestore} from '../Firebase/config'
 
 export const useLogin =()=>{
    const[isPending,setIspending] =useState(false)
@@ -15,7 +15,8 @@ const login=async(email,password)=>{
     if(!res.user){
         throw new Error('Could not sign you in !!')
     }
-    console.log('login function',res.user)
+    const {uid} =res.user
+    await appFirestore.collection('users').doc(uid).update({online:true}) 
     setIspending(false)
     dispatch({type:'LOGIN',payload:res.user})
     }catch(err){
