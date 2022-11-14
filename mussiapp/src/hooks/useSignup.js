@@ -1,12 +1,12 @@
 import {useState} from 'react'
 import{useAutContext} from './useAuthContext'
-import {appAuth} from '../Firebase/config'
+import {appAuth, appStorage} from '../Firebase/config'
 
 export const useLogin =()=>{
    const[status,setStatus] =useState(null)
    const[error,setError] =useState(null)
    const {user,dispatch} =useAutContext()
-const signUp=async(email,password,displayName)=>{
+const signUp=async(email,password,displayName,thumbnail)=>{
     setError(null)
     setStatus('loading')
     try{
@@ -17,11 +17,21 @@ const signUp=async(email,password,displayName)=>{
     }
     console.log('signup function',res.user)
     setStatus('success')
-    await res.user.updateProfile({displayName})
+     //uplaodpath
+     const uplaodPath =`Thumbnail/${res.user.uid}/${thumbnail.name}`
+     const photo = await appStorage.ref(uplaodPath).put(thumbnail)
+      // get photoURL
+      const photoURL = await photo.ref.getDownloadURL()
+      // update user profile with displayName and photo url
+          await res.user.updateProfile({displayName,photoURL})
+
+    //
     dispatch({type:'LOGIN',payload:res.user})
+   
+
     }catch(err){
         setError(err.message)
-        setStatus('Error')
+        setStatus('error')
     }
 }
 
