@@ -3,9 +3,11 @@ import './Navbar.css'
 import {Link} from 'react-router-dom'
 import Temple from '../../assets/temple.svg'
 import { useLogout } from '../../hooks/useLogout'
+import useAuthContext from '../../hooks/useAuthContext'
 
 const Navbar = () => {
-  const {logout,status,error}= useLogout()
+  const {logout,isPending,error}= useLogout()
+  const {user} =useAuthContext()
   return (
     <div className="nav">
         <ul >
@@ -13,11 +15,13 @@ const Navbar = () => {
                 <img src={Temple} alt=""  />
                 <span className="title">MussiApp</span>
             </li>
+            {!user && (<>
             <li><Link to ='/login'>Login</Link></li>
             <li><Link to ='/signup'>Signup</Link></li>
+            </>)}
             <li>
-             {status !=='loading'&& <button className="btn"onClick={logout}>Logout</button>}
-             {status==='loading' && <button className="btn" onClick={logout} disabled>Login out ..</button>}
+             {!isPending && <button className="btn"onClick={logout}>Logout</button>}
+             {isPending && <button className="btn"  disabled>Login out ...</button>}
               </li>
         </ul>
     </div>

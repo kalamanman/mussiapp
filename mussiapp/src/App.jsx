@@ -16,7 +16,7 @@ import Sidebar from './components/sidebar/Sidebar'
 function App() {
   
     const {authIsReady,user} =useAuthContext()
-    console.log('inside app   :', user?.displayName)
+    
   return (
    
     <div className="App">
