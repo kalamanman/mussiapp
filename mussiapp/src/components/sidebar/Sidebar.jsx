@@ -2,14 +2,20 @@ import{NavLink} from 'react-router-dom'
 import './Sidebar.css'
 import DashboardIcon from '../../assets/dashboard_icon.svg'
 import AddIcon from '../../assets/add_icon.svg'
+import Avetar from '../avetar/avetar'
+import useAuthContext from '../../hooks/useAuthContext'
 
 const Sidebar = () => {
+ const {user} =useAuthContext()
+
   return (
+
     <div className='sidebar' >
+       
         <div className="content">
             <div className="user">
-                {/*  avetar and user later */}
-                <p> Hey user</p>
+                <Avetar src={user.photoURL}/>
+                <p> Hey  {user.displayName} </p>
             </div>
             <nav className="links">
                 <ul>
@@ -29,8 +35,9 @@ const Sidebar = () => {
             </nav>
         </div>
         
-        Sidebar
+        
   </div>
+ 
   )
 }
 
