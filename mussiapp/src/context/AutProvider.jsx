@@ -1,5 +1,5 @@
 import {useEffect,useReducer} from 'react'
-import { appAuth, appFirestore } from '../Firebase/config'
+import { appAuth } from '../Firebase/config'
 import { AuthContext } from './AuthContext'
 import { authReducer } from './authReducer'
 
@@ -8,7 +8,7 @@ import { authReducer } from './authReducer'
                         user:null,
                         authIsReady:null
                      })
-    console.log('The state:',state)
+                     console.log('The state:',state)
     // user  auth status 
     useEffect(()=>{
     const unsub =appAuth.onAuthStateChanged(user=>{
@@ -16,6 +16,7 @@ import { authReducer } from './authReducer'
         unsub()
     })
     },[])
+    
     return(
         <AuthContext.Provider value={{...state,dispatch}}>
             {children}
