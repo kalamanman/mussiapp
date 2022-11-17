@@ -12,6 +12,7 @@ import Create from './pages/create/Create'
 import Project from './pages/project/Project'
 import Navbar from './components/navbar/Navbar'
 import Sidebar from './components/sidebar/Sidebar'
+import OnlineUsers from './components/onlineUsers/OnlineUsers'
 
 function App() {
   
@@ -32,14 +33,16 @@ function App() {
           <Route path='/create' element={user?<Create/>:<Navigate to ='/login'/>}/>
           <Route path='/project/:id/*' element={user?<Project/>:<Navigate to ='/login'/>}/>
         </Routes>
-    
+        
     
       </div>
+      {user && <OnlineUsers/>}
       </BrowserRouter>
       )}
-    </div>
+      
    
-  )
+   
+ </div> )
 }
 
 export default App

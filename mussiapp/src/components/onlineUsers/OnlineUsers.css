@@ -1,0 +1,46 @@
+.online-users{
+    
+    width: 300px;
+    min-width: 300px;
+    position: relative;
+    background: var(--primary-color);
+    color: #fff;
+    font-weight: 2.2em;
+    
+}
+.online-users .user{
+    display: flex;
+    align-items: center;
+    
+  margin: 20px;
+    
+}
+,.online-users .user .display-name {
+    display: block;
+    
+}
+
+.online-users .user img{
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 50px;
+
+}
+.online-users .user .online{
+    
+    width:20px;
+    height: 20px;
+    background-color: green;
+    border-radius: 100%;
+    margin-right: 30px;
+}
+.online-users .user .offline{
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    background-color: red;
+    margin-right: 30px;
+    
+}
+
