@@ -15,16 +15,20 @@
   margin: 20px;
     
 }
-,.online-users .user .display-name {
-    display: block;
-    
+.online-users .user .loggedout {
+    font-size: 1em;
+    opacity: 0.6;
+    color:red
 }
-
+.online-users .user .logged{
+    color: green;
+    font-size: 1.2em;
+}
 .online-users .user img{
     width: 40px;
     height: 40px;
     border-radius: 100%;
-    margin-right: 70px;
+    margin-right: 50px;
 
 }
 .online-users .user .online{
@@ -40,6 +44,7 @@
     height: 15px;
     border-radius: 100%;
     background-color: red;
+    opacity: 0.6;
     margin-right: 30px;
     
 }

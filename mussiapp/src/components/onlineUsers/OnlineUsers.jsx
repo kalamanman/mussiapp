@@ -15,7 +15,8 @@ const OnlineUsers = () => {
             <div key={user.id} className='user'>
                 <span className={user.online?'online':'offline'}></span>
                 <img src={user.photoURL}  alt="avatar image" className='avatar'/>
-                <span  className='display-name'>
+                <span  
+                   className={user.online?'logged':'loggedout'}>
                     {user.id===uid ?
                     'You are online' :user.displayName} 
                 </span>
