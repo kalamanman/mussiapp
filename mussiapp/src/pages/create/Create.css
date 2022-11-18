@@ -1,0 +1,20 @@
+.create-form{
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+textarea{
+    width:100%;
+}
+.create-form span{
+    margin: 5px 0;
+}
+.create-form button{
+    margin: 10px 0;
+}
+.create-form input{
+    padding-left: 0;
+    padding-right:0;
+
+    
+}

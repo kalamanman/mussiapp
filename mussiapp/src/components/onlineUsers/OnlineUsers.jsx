@@ -9,7 +9,7 @@ const OnlineUsers = () => {
     
   return (
     <div className='online-users'>
-        <h2 className="all-users">All Users</h2>
+        <h2>All Users</h2>
         {error && <div className='error'>{error} </div> }
         {users && users.map(user=>(
             <div key={user.id} className='user'>
