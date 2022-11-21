@@ -20,7 +20,7 @@
     padding: 15px;
 }
 .card h3{
-    color: grey;
+    color: var(--heading-color);
     font-size: 1.2rem;
     text-align: center;
 }
@@ -29,4 +29,5 @@ a {
 }
 .card p {
     margin :5px auto;
+    color:var(--text-color);
 }
