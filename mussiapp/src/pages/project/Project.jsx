@@ -16,9 +16,9 @@ const Project = () => {
         <h4>{project.name} </h4>
         
              <p>Category: {project.category} </p>
-             <p> Created by: {project.createdBy.displayName} </p>
-             <p>Created at: {project.createdAt.toDate().toString()}</p>
-             <p>Due date: {project.dueDate.toDate().toString()}</p>
+             <p> Created by : {project.createdBy.displayName} </p>
+             <p>Created on : {project.createdAt.toDate().toString()}</p>
+             <p>Due date : {project.dueDate.toDate().toString()}</p>
              <hr />
              <p className='details'>{project.details}</p>
              <h5>Assigned users :</h5>

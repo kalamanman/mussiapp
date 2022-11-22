@@ -30,14 +30,20 @@
 }
 .project-container .avetar{
     margin-top: 1rem;
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
+    filter:invert(20%)
 }
 .project-container span{
     text-align: center;
     margin:0 1.2rem;
 }
 .project-container h5{
-    font-size: 1.2rem;
+    font-size: 1rem;
     letter-spacing: 0.1rem;
+}
+.project-container .details{
+    font-size: 1.2rem;
+    line-height: 1.1rem;
+    font-weight: 500;
 }
