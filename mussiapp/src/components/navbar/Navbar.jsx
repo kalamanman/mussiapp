@@ -13,7 +13,7 @@ const Navbar = () => {
         <ul >
             <li className="logo">
                 <img src={Temple} alt=""  />
-                <span className="title">MussiApp</span>
+                <span className="title">MussiApp <p id='newman'>By K Newman</p> </span>
             </li>
             {!user && (<>
             <li><Link to ='/login'>Login</Link></li>

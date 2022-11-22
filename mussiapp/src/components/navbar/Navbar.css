@@ -6,6 +6,11 @@
     margin-bottom: 20px;
     box-sizing: border-box;
 }
+#newman {
+    margin-left: 20px;
+    font-size: 0.54rem;
+    
+}
 .nav ul {
     display: flex;
     margin: 0 auto;
