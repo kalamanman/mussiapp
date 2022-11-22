@@ -1,8 +1,14 @@
 
-
+.project-container{
+    display: flex;
+    justify-content: space-between;
+}
+.project-container Addcomment-container{
+    flex:1;
+}
 .project-container .card{
-    max-width:100%;
-    min-width: 100%;
+    flex:2;
+    min-width: 60%;
     background-color: #fff;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
     padding:2%;
@@ -43,7 +49,7 @@
     letter-spacing: 0.1rem;
 }
 .project-container .details{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     line-height: 1.1rem;
     font-weight: 500;
 }

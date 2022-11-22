@@ -1,6 +1,7 @@
 import { useDocument } from '../../hooks/useDocument'
 import {useParams} from 'react-router-dom'
 import Avetar from '../../components/avetar/Avetar'
+import AddComment from './AddComment'
 import './Project.css'
 
 
@@ -10,6 +11,7 @@ const Project = () => {
   const{document:project,error,isPending}=useDocument('projects',id)
   return (
     <div className='project-container' >
+      
       {isPending &&<p>Is loading ...</p> }
       {error && <p className='error' >{error} </p> }
       {project&& <div className='card'>
@@ -20,6 +22,7 @@ const Project = () => {
              <p>Created on : {project.createdAt.toDate().toString()}</p>
              <p>Due date : {project.dueDate.toDate().toString()}</p>
              <hr />
+             <h5>Project details :</h5>
              <p className='details'>{project.details}</p>
              <h5>Assigned users :</h5>
              <ul className='assigned-users' >
@@ -35,6 +38,9 @@ const Project = () => {
             }
              </ul>
       </div> } 
+      <div className='AddComment-container'>
+        <AddComment projectId={id}/>
+      </div>
       </div>
   )
 }
