@@ -13,6 +13,7 @@ const signup=async(email,password,displayName,thumbnail)=>{
     const res =  await 
     appAuth.createUserWithEmailAndPassword(email,password)
     if(!res.user){
+       setError("Could not sign you in")
         throw new Error('Could not sign you up !!')
     }
     

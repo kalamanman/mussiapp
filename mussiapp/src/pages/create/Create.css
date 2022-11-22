@@ -1,6 +1,10 @@
 .create-form{
     max-width: 400px;
     margin: 0 auto;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    border-radius: 8px;
 }
 
 textarea{
@@ -22,8 +26,7 @@ textarea{
 }
 .create-form span img{
     margin-right: 5px;
-    color: white;
+    filter: invert(50%);
+    
 }
-.creat-form span{
-   
-}
+

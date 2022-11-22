@@ -32,8 +32,10 @@ ul {
   font-weight: 500;
   cursor: pointer;
 }
- span, label{
+  label{
   display: block;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
   
 }
 
@@ -49,6 +51,8 @@ a{
   margin-bottom: 10px;
   width: 100%;
   padding: 8px;
+  font-size: 1.2rem;
+  color: #444;
 }
 input{
   border-radius: 4px;
@@ -60,8 +64,19 @@ h2{
 .error{
   color: red;
   background: var(--bg-color);
-  border: 1px solid red;
+  border: 1px solid var(--highlight-color);
   margin: 10px 0px;
   padding:  10px ;
   border-radius: 4px;
+}
+
+textarea{
+  font-size: 1.1rem;
+  border-radius: 4px;
+  color: #444;
+  
+}
+span{
+  display: flex;
+  align-items: center;
 }

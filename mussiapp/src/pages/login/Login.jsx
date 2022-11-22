@@ -35,12 +35,9 @@ const Login = () => {
                value={password}             
             />
         </label>
-       
-        
-        {!isPending?<button className="btn"onClick={handleSubmit}>Login</button>:''}
-        {isPending?<button className="btn" disabled>Loading ...</button>:''}
-      
-        {error&&  <p className='error'>{error}</p> }
+           {!isPending?<button className="btn"onClick={handleSubmit}>Login</button>:''}
+           {isPending?<button className="btn" disabled>Loading ...</button>:''}
+           {error&&  <p className='error'>{error}</p> }
     </form>
     
   )

@@ -9,10 +9,14 @@ const Signup = () => {
     const[displayName,setDisplayName]=useState('')
     const[thumbnail,setThumbnail] =useState(null)
     const[thumbnailError,setThumbnailError]=useState('')
-    const {signup,status,error} = useSignup()
+    const {signup,isPending,error} = useSignup()
     //submit
     const handleSubmit=(e)=>{
         e.preventDefault()
+        if (!thumbnail){
+setThumbnailError('Please select an image FILE for your profile !')
+return
+        }
         signup(email,password,displayName,thumbnail)
     }
     //handleClick
@@ -31,8 +35,8 @@ const Signup = () => {
         setThumbnailError('Please choose an image file !')
         return
     }
-    if (selected.size>1000000){
-        setThumbnailError('File  has to be less than 1 Kbytes !')
+    if (selected.size>100000){
+        setThumbnailError('File  has to be less than 100 Kbytes !')
         return
     }
         
@@ -80,6 +84,7 @@ const Signup = () => {
             />
         </label>
         {thumbnailError&&  <p className='error'>{thumbnailError}</p> }
+        {error&&  <p className='error'>{error}</p> }
         <button className="btn"onClick={handleSubmit}>Signup</button>
         
     </form>

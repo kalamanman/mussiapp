@@ -33,4 +33,5 @@ a {
 }
 .card:hover{
     transform:  scale(1.02);
+    transition: all 1s ease-in
 }

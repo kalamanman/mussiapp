@@ -1,5 +1,6 @@
 .App{
   display: flex;
+
 }
 
  .container{
@@ -7,4 +8,9 @@
   padding: 0px 60px;
   height: 100vh;
   
+  
+}
+.container .nav{
+  
+
 }
