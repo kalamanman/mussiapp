@@ -138,10 +138,10 @@ const[users,setUsers]=useState([])
             isMulti
           />
          </label>
-           {}
          <button className='btn' > 
          <span><img src={AddIcon} alt="add icon"  />Add project</span></button>
          
+        
       {error && <div className='error'>{error}</div> }
       {formError&& <p className='error'>{formError} </p>}
          </form>

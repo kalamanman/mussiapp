@@ -7,6 +7,7 @@
     flex:1;
 }
 .project-container .card{
+    position: relative;
     flex:2;
     min-width: 60%;
     background-color: #fff;
@@ -53,3 +54,13 @@
     line-height: 1.1rem;
     font-weight: 500;
 }
+#temple{
+ position: absolute;
+ top:0;
+ left: 0;
+ width:25px;
+ height:25px;
+ padding: 10px;
+ filter: invert(50%);
+}
+    

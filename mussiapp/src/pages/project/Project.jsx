@@ -2,6 +2,7 @@ import { useDocument } from '../../hooks/useDocument'
 import {useParams} from 'react-router-dom'
 import Avetar from '../../components/avetar/Avetar'
 import AddComment from './AddComment'
+import Temple from '../../assets/temple.svg'
 import './Project.css'
 
 
@@ -37,10 +38,12 @@ const Project = () => {
               ))
             }
              </ul>
+             <span id='temple'><img  src={Temple}/>MussiApp</span>
       </div> } 
       <div className='AddComment-container'>
-        <AddComment projectId={id}/>
+      <AddComment projectId={id} />
       </div>
+      
       </div>
   )
 }
