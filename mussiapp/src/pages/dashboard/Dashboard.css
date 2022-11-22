@@ -31,3 +31,6 @@ a {
     margin :5px auto;
     color:var(--text-color);
 }
+.card:hover{
+    transform:  scale(1.02);
+}

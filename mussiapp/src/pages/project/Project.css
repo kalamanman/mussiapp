@@ -1,0 +1,43 @@
+
+
+.project-container .card{
+    max-width:100%;
+    min-width: 100%;
+    background-color: #fff;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    padding:2%;
+}
+.project-container  h4{
+   letter-spacing: 0.1rem;
+    font-size: 1.4rem;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.project-container .card p {
+    color:var(--text-color);
+    line-height: 1rem;
+}
+.project-container .details p{
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: rgba(0,0,0,0);
+    background-color: var(--bg-color);
+}
+.project-container ul{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+.project-container .avetar{
+    margin-top: 1rem;
+    width: 50px;
+    height: 50px;
+}
+.project-container span{
+    text-align: center;
+    margin:0 1.2rem;
+}
+.project-container h5{
+    font-size: 1.2rem;
+    letter-spacing: 0.1rem;
+}

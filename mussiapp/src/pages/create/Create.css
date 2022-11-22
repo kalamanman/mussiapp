@@ -6,15 +6,24 @@
 textarea{
     width:100%;
 }
-.create-form span{
-    margin: 5px 0;
-}
+
+
 .create-form button{
-    margin: 10px 0;
+    margin-top: 8px;
+    display: flex;
+
+    align-items: center;
 }
 .create-form input{
     padding-left: 0;
     padding-right:0;
 
     
+}
+.create-form span img{
+    margin-right: 5px;
+    color: white;
+}
+.creat-form span{
+   
 }

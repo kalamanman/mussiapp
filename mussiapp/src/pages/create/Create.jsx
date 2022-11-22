@@ -4,6 +4,7 @@ import { useCollection } from '../../hooks/useCollection'
 import { timestamp } from '../../Firebase/config'
 import useAuthContext from '../../hooks/useAuthContext'
 import { useNavigate } from 'react-router-dom'
+import AddIcon from '../../assets/add_icon.svg'
 //styles
 import './Create.css'
 import { useFirestore } from '../../hooks/useFirestore'
@@ -138,7 +139,8 @@ const[users,setUsers]=useState([])
           />
          </label>
            {}
-         <button className='btn' >Add project</button>
+         <button className='btn' > 
+         <span><img src={AddIcon} alt="add icon"  />Add project</span></button>
          
       {error && <div className='error'>{error}</div> }
       {formError&& <p className='error'>{formError} </p>}
