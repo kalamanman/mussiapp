@@ -10,6 +10,7 @@
     position: relative;
     flex:2;
     min-width: 60%;
+    max-height: 50vh;
     background-color: #fff;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
     padding:2%;
@@ -63,4 +64,21 @@
  padding: 10px;
  filter: invert(50%);
 }
-    
+.project-container ul{
+    display: flex;
+    flex-direction: column;
+    min-width: 30%;
+}
+.project-container .author{
+    border: 1px solid #fefefe;
+    border-radius: 4px;
+    background-color: #fff;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    min-width: 100%;
+    margin-bottom: 10px;
+    padding: 16px;;
+}
+.author .avetar{
+    width: 25px;
+    height: 25px;
+}

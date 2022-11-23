@@ -16,6 +16,8 @@ const resReducer=(state,action)=>{
                 return{success:null,document:null,isPending:false,error:action.payload}
         case 'ADDED_DOCUMENT':
             return{isPending:false,success:true,document:'document is saved',error:null}
+        case 'UPDATED_DOCUMENT':
+            return{isPending:false,success:true,document:'document is updated',error:null}
               
     default :
     return state    
@@ -47,10 +49,21 @@ export const useFirestore = (collection) => {
 
 
     //update document
+ const updateDocument= async(id,updates)=>{
+    dispatch({type:'IS_PENDING'})
+    try{
+      const updated= await ref.doc(id).update(updates)
+       dispatch({type:'UPDATED_DOCUMENT'})
+       return updated
+    }catch(err){
+        dispatch({type:'ERROR',payload:err.message})
+        
+    }
+    
+ }
 
 
 
-
-    return {addDocument,response}
+    return {addDocument,updateDocument,response}
 }
 

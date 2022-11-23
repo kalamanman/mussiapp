@@ -40,10 +40,27 @@ const Project = () => {
              </ul>
              <span id='temple'><img  src={Temple}/>MussiApp</span>
       </div> } 
-      <div className='AddComment-container'>
-      <AddComment projectId={id} />
-      </div>
+       <ul>
+       <div className='AddComment-container'>
+     
+     <AddComment project={project} />
+     </div>
+        <h4>project comments :</h4>
+      {project && project.comments.map(comment=>(
+          <div className="author">
+            <span>
+            <Avetar src={comment.phtotURL}/>
+            <p className='display-name'>{comment.displayName} </p>
+            </span>
+             
+             <p className="date">date here</p>
+            <p className='date'>{comment.content} </p>
+          
+          </div>
+        ))}
+       
       
+      </ul>
       </div>
   )
 }
