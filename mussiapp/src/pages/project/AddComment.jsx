@@ -3,7 +3,7 @@ import AddIcon from '../../assets/add_icon.svg'
 import { useFirestore } from '../../hooks/useFirestore'
 import useAuthContext from '../../hooks/useAuthContext'
 import { timestamp } from '../../Firebase/config'
-import Avetar from '../../components/avetar/Avetar'
+
 
 const AddComment = ({project}) => {
     const[newComment,setNewComment]=useState('')
@@ -13,7 +13,7 @@ const handleSubmit=async (e)=>{
   e.preventDefault()
   const comment={
     displayName:user.displayName,
-    phtotURL:user.photoURL,
+    photoURL:user.photoURL,
     content:newComment,
     createdAt:timestamp.fromDate(new Date()),
     id:Math.floor((Math.random()*1000000)),
@@ -35,7 +35,7 @@ const handleSubmit=async (e)=>{
         <h4>Add comment</h4>
         <form className='addcomment-form' onSubmit={handleSubmit}>
             <label>
-                <span>Add comment :</span>
+                
                 <textarea 
                 required
                 onChange={e=>setNewComment(e.target.value)}
@@ -44,7 +44,7 @@ const handleSubmit=async (e)=>{
             </label>
             <button className='btn' > 
                <span>
-                 <img src={AddIcon} alt="add icon"  />Add project 
+                 <img src={AddIcon} alt="add icon"  />Add comment 
                  </span>
          </button>
          

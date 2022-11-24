@@ -11,8 +11,10 @@ export const useDocument = (collection,id) => {
     const ref = appFirestore.collection(collection).doc(id)
     setIsPending(true)
   const unsub = ref.onSnapshot(snapshot=>snapshot.data()?
+      //we have a document
     setDocument({...snapshot.data(),id:snapshot.id}):
-    setError('No such a document'),
+    //empty snapshot no document
+    setError('No such document exists !!'),
     (err)=>{
     setError(err.message)
     setIsPending(false)

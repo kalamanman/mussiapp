@@ -1,56 +1,54 @@
 
-.project-container{
+.project{
     display: flex;
     justify-content: space-between;
 }
-.project-container Addcomment-container{
+.project comments{
     flex:1;
+    
+    padding: 0;
+    margin: 0;
 }
-.project-container .card{
-    position: relative;
+.project summary{
     flex:2;
-    min-width: 60%;
-    max-height: 50vh;
+    min-width: 100%;
+    padding: 0;
+}
+.project  .card{
+    position: relative;
     background-color: #fff;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
-    padding:2%;
-}
-.project-container  h4{
+    padding:4rem;
+    
+    }
+     
+.project  h4{
    letter-spacing: 0.1rem;
-    font-size: 1.4rem;
+    font-size: 1.1rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
-.project-container .card p {
+.project .card p {
     color:var(--text-color);
     line-height: 1rem;
 }
-.project-container .details p{
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: rgba(0,0,0,0);
-    background-color: var(--bg-color);
-}
-.project-container ul{
-    display: flex;
-    align-items: center;
-    justify-content: start;
-}
-.project-container .avetar{
+
+
+.project .avetar{
     margin-top: 1rem;
     width: 40px;
     height: 40px;
     filter:invert(20%)
 }
-.project-container span{
+.project span{
     text-align: center;
     margin:0 1.2rem;
 }
-.project-container h5{
+.project h5{
     font-size: 1rem;
     letter-spacing: 0.1rem;
 }
-.project-container .details{
+.project .details{
     font-size: 1.1rem;
     line-height: 1.1rem;
     font-weight: 500;
@@ -64,21 +62,23 @@
  padding: 10px;
  filter: invert(50%);
 }
-.project-container ul{
-    display: flex;
-    flex-direction: column;
-    min-width: 30%;
-}
-.project-container .author{
-    border: 1px solid #fefefe;
-    border-radius: 4px;
-    background-color: #fff;
-    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
-    min-width: 100%;
-    margin-bottom: 10px;
-    padding: 16px;;
-}
-.author .avetar{
+
+
+.comments .avetar{
     width: 25px;
     height: 25px;
+    margin-right: auto;
+}
+
+.project #comment{
+    min-width:100%;
+    border: 1px solid #fefefe;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+    padding:10px;
+    margin: 10px;
+    overflow-x: hidden;
+    
+
 }

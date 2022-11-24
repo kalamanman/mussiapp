@@ -3,10 +3,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&family=Roboto:ital,wght@0,100;1,100;1,300&display=swap');
 
 
-*{
-  margin: 0px;
-  padding: 0px;
-}
 /*color variables */
 :root{
 --heading-color:#444;
@@ -59,9 +55,8 @@ a{
   padding: 8px;
   font-size: 1.2rem;
   color: #444;
-}
-input{
-  border-radius: 4px;
+
+ border-radius: 4px;
 }
 h2{
   color: var(--heading-color);

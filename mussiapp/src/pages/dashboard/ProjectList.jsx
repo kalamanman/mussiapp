@@ -2,7 +2,7 @@ import {Link} from 'react-router-dom'
 import Avetar from '../../components/avetar/Avetar'
 const ProjectList = ({projects}) => {
   return (
-    <ul className='projects-grid'>
+    <div className='projects-grid'>
       {projects.length>0?projects.map(project=>(
         <Link  to={`/project/${project.id}`}
         key={project.id}  
@@ -21,7 +21,7 @@ const ProjectList = ({projects}) => {
         </Link>
       )): <p>No projects yet !</p>
     }
-    </ul>
+    </div>
   )
 }
 
