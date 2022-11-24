@@ -83,6 +83,7 @@
     padding:10px;
     margin: 5px auto;
     overflow-x: hidden;
+    max-width: 150px;
     
 
 }
@@ -96,6 +97,6 @@
     padding: 0;
 }
 #comment  p {
-    
+    overflow-wrap: break-word;
     margin:0 auto;
 }
