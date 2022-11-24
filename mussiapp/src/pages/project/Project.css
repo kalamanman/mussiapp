@@ -91,7 +91,11 @@
     color: var(--heading-color);
     text-align: left;
 }
-#comment span,#comment  p {
+#comment span{
     margin-bottom: 0;
     padding: 0;
+}
+#comment  p {
+    margin-left: auto;
+    margin:0 auto;
 }
