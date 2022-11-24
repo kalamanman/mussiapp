@@ -19,7 +19,7 @@
     background-color: #fff;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
     padding:4rem;
-    
+    border-radius: 8px;
     }
      
 .project  h4{
@@ -71,14 +71,23 @@
 }
 
 .project #comment{
+    color: var(--text-color);
     min-width:100%;
     border: 1px solid #fefefe;
     border-radius: 5px;
     background-color: #fff;
     box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
     padding:10px;
-    margin: 10px;
+    margin: 5px;
     overflow-x: hidden;
     
 
+}
+.comments h4{
+    margin-bottom: 20px;
+    color: var(--heading-color);
+    text-align: left;
+}
+comments span {
+    margin-bottom: 0;
 }
