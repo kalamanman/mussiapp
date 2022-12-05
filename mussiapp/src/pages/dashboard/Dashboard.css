@@ -19,6 +19,7 @@
     box-shadow: 3px 3px 5px  rgba(0,0,0,0.5);
     margin:15px 10px 10px 0px;
     padding: 15px;
+    
 }
 .card h3{
     color: var(--heading-color);
@@ -35,4 +36,30 @@ a {
 .card:hover{
     transform:  scale(1.02);
     transition: all 1s ease-in
+}
+.project-filter nav{
+    display: flex;
+    border-radius: 0.5rem;
+    background-color: rgb(255, 255, 255);
+    padding: 0.2rem 0.1rem;
+    align-items: center;
+    margin-bottom: 2rem;
+    justify-content: center;
+}
+.project-filter .f-btn{
+    background-color:#fff;
+    color:blue;
+    padding: 0.2rem 0.4rem;
+   cursor: pointer;
+    font-size: 0.8rem;
+    font-weight: 400;
+    border: none;
+    border-right: #fefefe;
+}
+
+
+.f-btn.active,.f-btn:hover{
+    background-color: blue;
+    color: #fff;
+    border-radius: 0.4rem;
 }

@@ -18,6 +18,8 @@ const resReducer=(state,action)=>{
             return{isPending:false,success:true,document:'document is saved',error:null}
         case 'UPDATED_DOCUMENT':
             return{isPending:false,success:true,document:'document is updated',error:null}
+        case 'DELETED_DOCUMENT':
+            return{isPending:false,success:true,document:'document is deleted',error:null}
               
     default :
     return state    
@@ -44,7 +46,17 @@ export const useFirestore = (collection) => {
 
     //delete document
 
+const deleteDocument =async (id)=>{
+    dispatch({type:'IS_PENDING'})
+    try{
+       await ref.doc(id).delete()
+       dispatch({type:'DELETED_DOCUMENT'})
+    }catch(err){
+        dispatch({type:'ERROR',payload:err.mesage})
+        
+    }
 
+}
 
 
 
@@ -64,6 +76,6 @@ export const useFirestore = (collection) => {
 
 
 
-    return {addDocument,updateDocument,response}
+    return {addDocument,deleteDocument,updateDocument,response}
 }
 
