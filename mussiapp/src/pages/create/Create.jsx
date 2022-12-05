@@ -55,7 +55,7 @@ const[users,setUsers]=useState([])
         displayName:assignee.value.displayName
       }))
       const project ={
-        name :name.toUpperCase(),
+        name :name,
         details,
         category,
         dueDate:timestamp.fromDate(new Date(dueDate)),
