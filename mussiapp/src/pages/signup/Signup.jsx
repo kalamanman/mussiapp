@@ -35,7 +35,7 @@ return
         setThumbnailError('Please choose an image file !')
         return
     }
-    if (selected.size>100000){
+    if (selected.size>10000000){
         setThumbnailError('File  has to be less than 100 Kbytes !')
         return
     }
