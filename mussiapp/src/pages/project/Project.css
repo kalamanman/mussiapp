@@ -100,3 +100,13 @@
     overflow-wrap: break-word;
     margin:0 auto;
 }
+.card #temple  img{
+    position: absolute;
+    width: 2rem;
+    top: 0;
+    left: 5.3rem;
+}
+ #temple{
+    display: flex;
+    justify-content: start;
+}

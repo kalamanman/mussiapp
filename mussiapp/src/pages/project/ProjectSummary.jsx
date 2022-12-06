@@ -1,6 +1,6 @@
 import Avetar from '../../components/avetar/Avetar'
 import AddComment from './AddComment'
-import Temple from '../../assets/temple.svg'
+import Temple from '../../assets/temple.png'
 import './Project.css'
 import useAuthContext from '../../hooks/useAuthContext'
 import { useFirestore } from '../../hooks/useFirestore'
