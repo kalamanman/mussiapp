@@ -48,7 +48,7 @@ a {
 }
 .project-filter .f-btn{
     background-color:#fff;
-    color:blue;
+    color: var(--primary-color);
     padding: 0.2rem 0.4rem;
    cursor: pointer;
     font-size: 0.8rem;
@@ -59,7 +59,7 @@ a {
 
 
 .f-btn.active,.f-btn:hover{
-    background-color: blue;
+    background-color: var(--primary-color);
     color: #fff;
     border-radius: 0.4rem;
 }
